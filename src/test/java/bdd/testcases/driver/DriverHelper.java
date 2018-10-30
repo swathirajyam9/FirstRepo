@@ -37,8 +37,8 @@ public class DriverHelper {
                 ChromeDriverManager.getInstance().setup();
                 DesiredCapabilities capabilities = new DesiredCapabilities();
                 capabilities.setBrowserName("chrome");
-                driver = new RemoteWebDriver(new URL(remoteURL), capabilities);// for executing on remote
-                //driver = new ChromeDriver(); // for executing tests on local
+                driver = new RemoteWebDriver(new URL(remoteURL), capabilities);
+                //driver = new ChromeDriver();
                 break;
             case "ie":
                 InternetExplorerDriverManager.getInstance().setup();
@@ -99,10 +99,3 @@ public class DriverHelper {
         }
     }
 }
-
-/* We will get exception with
-  driver = new RemoteWebDriver(new URL(remoteURL), capabilities);
-  surround with try n catch (or) choose add exception to method signature
-  ----> throws MalformedURLException in DriverHelper class and also add to method signature where we invoke
-  openbrowser() method ie in Hooks also
-  */
