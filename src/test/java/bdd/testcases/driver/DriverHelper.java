@@ -55,7 +55,8 @@ public class DriverHelper {
         }
     }
 
-    public void closeBrowser() {
+    public void closeBrowser()
+    {
         //driver.quit();
     }
 
